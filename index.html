@@ -1,1 +1,56 @@
-<html><body>Neon Border</body></html>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Neon Border PRO — REAL</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="sidebar">
+    <h1>Neon Border PRO (Real)</h1>
+
+    <label>Tipo de Borda</label>
+    <select id="borderType">
+        <option value="line">Linha</option>
+        <option value="rectangle">Retângulo</option>
+        <option value="ellipse">Elipse</option>
+        <option value="png">PNG Border</option>
+    </select>
+
+    <label>Preset</label>
+    <select id="presetSelect">
+        <option value="custom">Custom</option>
+        <option value="pastel">Pastel</option>
+        <option value="aurora">Aurora</option>
+        <option value="cyber">Cyberpunk</option>
+    </select>
+
+    <label>Cores</label>
+    <div class="colors">
+        <input type="color" id="c1" value="#ff00ff">
+        <input type="color" id="c2" value="#00eaff">
+        <input type="color" id="c3" value="#00ff9c">
+        <input type="color" id="c4" value="#ff0095">
+    </div>
+
+    <label>PNG Border</label>
+    <input type="file" id="pngUpload" accept="image/png">
+
+    <label>OBS Link</label>
+    <input id="obsLink" readonly>
+
+    <button onclick="copyOBS()">Copiar</button>
+</div>
+
+<canvas id="neonCanvas"></canvas>
+
+<script src="core/presets.js"></script>
+<script src="core/shapes.js"></script>
+<script src="core/obs-link.js"></script>
+<script src="core/png-border.js"></script>
+<script src="core/animation-engine.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
